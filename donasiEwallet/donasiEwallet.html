@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="donasiEwallet.css">
     <title>Donasi E-wallet</title>
 </head>
+
 <body>
     <div class="container">
         <img src="/img/logoyatim.jpg" width="40px" height="40px">
@@ -16,24 +18,29 @@
                 <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Lengkap" required><br><br>
 
                 <label for="account-number">Nomor Handphone : </label><br>
-                <input type="text" id="account-number" name="account_number" pattern="[0-9]{10,12}" placeholder="Masukkan Nomor Handphone"><br><br>
+                <input type="text" id="account-number" name="account_number" pattern="[0-9]{10,12}"
+                    placeholder="Masukkan Nomor Handphone"><br><br>
 
                 <div class="opsi-Ewallet">
                     <label for="option-Ewallet">Opsi E-wallet : </label><br>
                     <div class="ewallet">
                         <!-- Dana -->
-                        <img  width="140" height="80" style="position: absolute; margin-left: 13px; margin-top: 10px;" src="/img/Dana.jpeg" alt="">
-                        <input style="width: 160px; height: 90px; position: absolute; filter: opacity(0.2);" type="checkbox" name="opsi_E-wallet" id="dana" value="DANA" >
+                        <img width="140" height="80" style="position: absolute; margin-left: 13px; margin-top: 10px;"
+                            src="/img/Dana.jpeg" alt="">
+                        <input style="width: 160px; height: 90px; position: absolute; filter: opacity(0.2);"
+                            type="checkbox" name="opsi_E-wallet" id="dana" value="DANA">
                         <!-- gopay -->
-                        <img width="130" height="110" style="position: absolute; margin-left: 135px; margin-top: -6px;" src="/img/gopay.jpg"
-                            alt="">
-                        <input style="width: 160px; height: 90px; position: absolute; filter: opacity(0.2); margin-left: 120px;" type="checkbox" name="opsi_E-wallet"
-                        id="gopay" value="GOPAY">
+                        <img width="130" height="110" style="position: absolute; margin-left: 135px; margin-top: -6px;"
+                            src="/img/gopay.jpg" alt="">
+                        <input
+                            style="width: 160px; height: 90px; position: absolute; filter: opacity(0.2); margin-left: 120px;"
+                            type="checkbox" name="opsi_E-wallet" id="gopay" value="GOPAY">
                         <!-- OVO -->
-                        <img width="140" height="110" style="position: absolute; margin-left: 246px; margin-top: -6px;" src="/img/ovo.webp"
-                            alt="">
-                        <input style="width: 160px; height: 90px; position: absolute; filter: opacity(0.2); margin-left: 236px;" type="checkbox"
-                            name="opsi_E-wallet" id="ovo" value="OVO">
+                        <img width="140" height="110" style="position: absolute; margin-left: 246px; margin-top: -6px;"
+                            src="/img/ovo.webp" alt="">
+                        <input
+                            style="width: 160px; height: 90px; position: absolute; filter: opacity(0.2); margin-left: 236px;"
+                            type="checkbox" name="opsi_E-wallet" id="ovo" value="OVO">
                     </div>
                 </div>
                 <br><br><br><br><br><br><br><br>
@@ -48,11 +55,12 @@
                 <button type="submit" class="btn-kirim">Kirim</button>
                 <button type="button" onclick="clearInput()" class="btn-clear">Clear</button>
             </div>
-            </form>
-            <br>
-            <p class="home"><a href="/home.html">Kembali Ke home</a></p>
-            </div>
+        </form>
+        <br>
+        <p class="home"><a href="/index.html">Kembali Ke home</a></p>
+    </div>
 </body>
+
 </html>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
@@ -71,15 +79,16 @@
             return
         }
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-       .then((response) => {
-               
-                if (response.ok){
-                        swal({
-                            title: "Good job!",
-                            text: "Data mu telah Terkirim!",
-                            icon: "success"
-                        })
-                    }})
+            .then((response) => {
+
+                if (response.ok) {
+                    swal({
+                        title: "Good job!",
+                        text: "Data mu telah Terkirim!",
+                        icon: "success"
+                    })
+                }
+            })
             .catch((error) => {
                 console.error(error);
                 swal({
@@ -100,7 +109,7 @@
     checkboxes.forEach((checkbox) => {
         checkbox.addEventListener('change', () => {
             const checkedCount = document.querySelectorAll('input[type="checkbox"]:checked').length;
-            if (checkedCount > 1) {    
+            if (checkedCount > 1) {
                 swal({
                     title: "Attention",
                     text: "Hanya boleh memilih 1 opsi pembayaran!",

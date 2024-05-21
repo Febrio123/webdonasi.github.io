@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  
+    font-family: sans-serif;
+    height: max-content;
+}
+
+.navbar {
+  height: 140px;  
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px; 
+  background-color: rgb(196, 55, 186);
+  position: fixed;
+  z-index: 100000;
+}
+
+.logo{
+    display: flex;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.logo h1 {
+  margin: 0; /* Menghilangkan margin yang tidak perlu */
+  font-size: 24px; /* Menyesuaikan ukuran font */
+  font-size: xx-large;
+  padding-left: 20px;
+  color: white;
+}
+
+.logo img{
+ margin-left: 40px;
+ margin-top: -20px;
+}
+
+nav {
+  margin-left: auto; /* Mengatur nav ke kanan */
+}
+
+nav ul {
+  list-style: none; /* Menghilangkan bullet points */
+  display: flex;
+  gap: 20px;
+  margin-right: 80px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+.background .judul{
+  position: absolute;
+  color: rgb(255, 255, 255);
+  z-index: 1;
+  margin-top: -1000px;
+  font-size: 90px;
+  margin-left: 40px;
+  text-overflow: clip;
+}
+.background .slogan{
+  position: absolute;
+  color: rgb(255, 255, 255);
+  z-index: 1;
+  margin-top: -890px;
+  font-size: 50px;
+  margin-left: 40px;
+  text-overflow: clip;
+  width: 60%;
+}
+.background img{
+  margin-top: 270px;
+  filter:brightness(.4);
+  position: relative;
+  z-index: 0;
+  
+}
+
+.container-card{
+width: 100%;
+height: max-content;
+display: flex;
+justify-content: space-evenly;
+margin-top: -500px;
+position: absolute;
+}
+
+.card-2{
+   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0.75rem;
+  background-color: rgb(255, 255, 255,0.6);
+  width: 300px;
+  height: 370px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),
+  0 2px 4px -2px rgba(0,0,0,.1);
+  margin-top: -60px;
+  
+}
+
+.card-1,.card-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0.75rem;
+  background-color: rgb(255, 255, 255,0.6);;
+  width: 300px;
+  height: 370px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),
+  0 2px 4px -2px rgba(0,0,0,.1);
+ margin-top: 100px;
+}
+
+.header {
+  position: relative;
+  background-clip: border-box;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 0.75rem;
+  background-color: rgb(196, 55, 186);
+  box-shadow: 0 10px 15px -3px rgb(196, 55, 186),0 4px 6px -4px rgba(33,150,243,.4);
+  height: 14rem;
+}
+
+.info {
+  border: none;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.title {
+  
+  letter-spacing: 0;
+  line-height: 1.375;
+  font-weight: 600;
+  font-size: 1.50rem;
+  margin-bottom: 0.5rem;
+  color:white;
+  text-shadow: 3px 3px 5px black;
+}
+
+.container-about{
+margin: auto;
+width:87%;
+height: max-content;
+padding-bottom: 40px;
+display: flex;
+justify-content: space-evenly;
+border: 2px solid rgb(255, 0, 221);
+border-radius: 40px;
+box-shadow: 2px 5px 5px 2px rgba(255,99,247,0.25);
+-webkit-box-shadow: 2px 5px 5px 2px rgba(255,99,247,0.25);
+-moz-box-shadow: 2px 5px 5px 2px rgba(255,99,247,0.25);
+color: whitesmoke;
+}
+
+.card {
+  padding-bottom: 30px;
+  width: 450px;
+  height: max-content;
+  background: rgb(68, 111, 198);
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.396);
+  font-size: 30px;
+  margin-top: 40px;
+  font-family: sans-serif;
+}
+
+.card:hover {
+  border-radius: 15px;
+  cursor: pointer;
+  transform: scale(1.02);
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.396);
+  background: rgb(70, 120, 200);
+}
+
+.first-content {
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  border-radius: 15px;
+  margin-top: 65px;
+}
+
+.judul-about{
+  font-family: sans-serif;
+  font-weight: 900;
+}
+.detail-about{
+  text-align: center;
+  font-family: sans-serif;
+  padding-right: 10px;
+  font-weight: 500;
+  padding: 20px;
+}
+
+.detail-about-2{
+  text-align: left;
+  font-family: sans-serif;
+  padding-left: 10px;
+  font-weight: 500;
+  padding: 20px;
+  margin-left: 20px;
+
+}
+
+.card:hover .first-content {
+  height: 0px;
+  opacity: 0;
+}
+
+.second-content {
+  height: 0%;
+  width: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: all 0.4s;
+  font-size: 0px;
+  transform: rotate(90deg) scale(-1);
+}
+
+.card:hover .second-content {
+  opacity: 1;
+  height: 100%;
+  font-size: 1.8rem;
+  transform: rotate(0deg);
+}
+
+footer .container-footer{
+  width: 100%;
+  height: 340px;
+  background-color:rgb(196, 55, 186) ;
+  margin-top: 200px;
+  position: relative;
+  display: flex;
+}
+
+.footer-content1{
+  width: 39%;
+  height:300px;
+  padding-top: 40px;
+  padding-left: 20px;
+  font-size: larger;
+  font-weight: 500;
+  color: white;
+  
+}
+.footer-privasi{
+  margin-top: 15px;
+
+}
+.footer-privasi a{
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 25px;
+}
+
+.footer-privasi a:hover{
+  color: rgb(219, 219, 219);
+}
+
+.footer-content2{
+  width: 25%;
+  height: 300px;
+  padding-top: 15px;
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-content2 p{
+font-size: 23px;
+color: white;
+display: inline-flex;
+position: absolute;
+margin-top: 24px;  
+}
+
+.footer-content2 p a{
+color: white;
+text-decoration: none;
+}
+
+.footer-content2 p a:hover{
+   color: rgb(219, 219, 219);
+}
+
+.footer-content2 svg .bg-twitter:hover{
+  fill: #212121;
+}
+
+.footer-content2 svg .bg-whatsapp:hover{
+  fill: #40c351
+}
+
+.footer-content2 svg .bg-instagram:hover{
+  fill: #fdfdfd
+}
+
+.footer-content2 svg .bg-facebook:hover{
+  fill: #3F51B5;
+}
+
+.footer-content3{
+  width: 36%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-content3 h2{
+ padding-left: 35px;
+  padding-top: 25px;
+  color: white;
+}
+
+.footer-content3 p{
+  padding-left: 35px;
+  padding-top: 25px;
+  color: white;
+  font-size: 20px;
+}
+
+.footer-content3 p .lokasi{
+  padding-left: 0;
+  color: white;
+  font-size: 20px;
+  display: inline;
+ 
+}
+
+.container-lokasi{
+  margin-top: 10px;
+}
+
+
+

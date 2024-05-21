@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formDonasiBank.css">
+    <title>Form Donasi Bank</title>
+</head>
+<body>
+        <div class="container">
+            <img src="/img/logoyatim.jpg" width="40px" height="40px">
+        <h1>Formulir Donasi Amal Bank</h1>
+        <form name="form-donasi-bank">
+            <div class="form-group">
+                <label for="name">Nama Lengkap :</label><br>
+                <input type="text" id="name" name="nama" placeholder="Masukkan Nama Lengkap" required><br><br>
+
+                <label for="account-number">Nomor Rekening Bank :</label><br>
+                <input type="text" id="account-number" name="no_rekening" placeholder="Masukkan Nomor Rekening"><br><br>
+
+                <label for="option_bank">Pilih Bank : </label><br>
+                <select for="option_bank" name="option_bank">
+                    <option value="BCA">BCA</option>
+                    <option value="Mandiri">Mandiri</option>
+                    <option value="BRI">BRI</option>
+                    <option value="BNI">BNI</option>
+                    <option value="BTN">BTN</option>
+                </select><br><br>
+                <label for="amount">Jumlah Donasi :</label><br>
+                <input type="number" id="jumlah" name="jumlah" placeholder="Masukkan Jumlah Donasi" required><br>
+                <select name="currency">
+                    <option value="IDR">IDR</option>
+                </select><br><br>
+
+                <label for="pesan">Masukkan Pesan :</label><br>
+                <textarea name="pesan" id="pesan" cols="70" rows="10" placeholder="Masukkan Pesan"></textarea><br><br>
+                <button type="submit" onclick="notif()" class="btn-kirim">Kirim</button>
+                <button type="button" onclick="clearInput()" class="btn-clear">Clear</button>
+
+            </div>
+        </form>
+        <br>
+        <p class="home"><a href="/home.html">Kembali Ke home</a></p>
+    </div>
+
+</body>
+</html>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyFmMkAZmozmurP9cOOQWoxwes9EPWGFufpZRFSHVBynBmtkB68dkk4lBegN0_XWG0_/exec'
+    const form = document.forms['form-donasi-bank']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+    })
+</script>
+<script>
+    function notif() {
+        swal({
+            title: "Good job!",
+            text: "Data mu telah Terkirim!",
+            icon: "success"
+        })
+    }
+    function clearInput() {
+        window.location.reload(true)
+    }
+</script>
